@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package api;
+
+option java_package = "com.banzaicloud.pipeline.api";
+
+import "google/protobuf/timestamp.proto";
+
+// The Process service definition.
+service Process {
+  // Adds a process entry
+  rpc LogProcess(ProcessEntry) returns (ProcessEntryResponse);
+  
+  // Adds a process event
+  rpc LogEvent(ProcessEvent) returns (ProcessEventResponse);
+}
+
+// The request message containing the process.
+message ProcessEntry {
+  string id = 1;
+  string parentId = 2;
+  uint32 orgId = 3;
+  string name = 4;
+  string resourceType = 5;
+  string resourceId = 6;
+  string status = 7;
+  google.protobuf.Timestamp startedAt = 8;
+  google.protobuf.Timestamp finishedAt = 9;
+}
+
+// The request message containing the event.
+message ProcessEvent {
+  string processId = 1;
+  string name = 2;
+  string log = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+message ProcessEntryResponse {}
+
+message ProcessEventResponse {}
