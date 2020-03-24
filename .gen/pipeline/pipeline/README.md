@@ -148,6 +148,7 @@ Class | Method | HTTP request | Description
 *OrganizationsApi* | [**ListOrgs**](docs/OrganizationsApi.md#listorgs) | **Get** /api/v1/orgs | List organizations
 *OrganizationsApi* | [**SyncOrgs**](docs/OrganizationsApi.md#syncorgs) | **Put** /api/v1/orgs | Synchronize Github organizations
 *PipelineApi* | [**ListCapabilities**](docs/PipelineApi.md#listcapabilities) | **Get** /api/v1/capabilities | Lists configured Pipeline capabilities
+*ProcessesApi* | [**ListProcesses**](docs/ProcessesApi.md#listprocesses) | **Get** /api/v1/orgs/{orgId}/processes | List processes in Pipeline
 *ScanlogApi* | [**ListScans**](docs/ScanlogApi.md#listscans) | **Get** /api/v1/orgs/{orgId}/clusters/{id}/scanlog | List scans
 *ScanlogApi* | [**ListScansByRelease**](docs/ScanlogApi.md#listscansbyrelease) | **Get** /api/v1/orgs/{orgId}/clusters/{id}/scanlog/{releaseName} | List scans by release
 *SecretsApi* | [**AddSecretTag**](docs/SecretsApi.md#addsecrettag) | **Put** /api/v1/orgs/{orgId}/secrets/{secretId}/tags/{tag} | Add a tag to a secret
@@ -237,6 +238,8 @@ Class | Method | HTTP request | Description
  - [CreatePkeClusterRequestBaseAllOf](docs/CreatePkeClusterRequestBaseAllOf.md)
  - [CreatePkeOnAzureClusterRequest](docs/CreatePkeOnAzureClusterRequest.md)
  - [CreatePkeOnAzureClusterRequestAllOf](docs/CreatePkeOnAzureClusterRequestAllOf.md)
+ - [CreatePkeOnVsphereClusterRequest](docs/CreatePkeOnVsphereClusterRequest.md)
+ - [CreatePkeOnVsphereClusterRequestAllOf](docs/CreatePkeOnVsphereClusterRequestAllOf.md)
  - [CreatePkeProperties](docs/CreatePkeProperties.md)
  - [CreatePkePropertiesCri](docs/CreatePkePropertiesCri.md)
  - [CreatePkePropertiesKubernetes](docs/CreatePkePropertiesKubernetes.md)
@@ -347,6 +350,7 @@ Class | Method | HTTP request | Description
  - [PkeOnAzureClusterNetwork](docs/PkeOnAzureClusterNetwork.md)
  - [PkeOnAzureNodePool](docs/PkeOnAzureNodePool.md)
  - [PkeOnAzureNodePoolSubnet](docs/PkeOnAzureNodePoolSubnet.md)
+ - [PkeOnVsphereNodePool](docs/PkeOnVsphereNodePool.md)
  - [PodCondition](docs/PodCondition.md)
  - [PodItem](docs/PodItem.md)
  - [PodItemLabels](docs/PodItemLabels.md)
@@ -354,6 +358,8 @@ Class | Method | HTTP request | Description
  - [PostLeaderElectionRequest](docs/PostLeaderElectionRequest.md)
  - [PostLeaderElectionResponse](docs/PostLeaderElectionResponse.md)
  - [PostReadyPkeNodeRequest](docs/PostReadyPkeNodeRequest.md)
+ - [Process](docs/Process.md)
+ - [ProcessEvent](docs/ProcessEvent.md)
  - [ReleaseWhiteListItem](docs/ReleaseWhiteListItem.md)
  - [RequestedResources](docs/RequestedResources.md)
  - [Resource](docs/Resource.md)
