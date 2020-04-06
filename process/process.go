@@ -14,10 +14,6 @@ const (
 	Finished Status = "finished"
 )
 
-func NewProcessLogActivity(service Service) ProcessLogActivity {
-	return ProcessLogActivity{service: service}
-}
-
 type ProcessLogActivityInput struct {
 	ID         string
 	ParentID   string
