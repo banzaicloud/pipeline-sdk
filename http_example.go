@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"github.com/banzaicloud/pipeline-internal-sdk/.gen/pipeline/pipeline"
-	"github.com/banzaicloud/pipeline-internal-sdk/transport"
-	"github.com/banzaicloud/pipeline-internal-sdk/transport/http"
+	"github.com/banzaicloud/pipeline-sdk/.gen/pipeline/pipeline"
+	"github.com/banzaicloud/pipeline-sdk/transport"
+	"github.com/banzaicloud/pipeline-sdk/transport/http"
 )
 
 const processID = "1234-5678-9111-1234"

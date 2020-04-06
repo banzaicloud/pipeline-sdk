@@ -1,1 +1,1 @@
-# pipeline-internal-sdk
+# pipeline-sdk

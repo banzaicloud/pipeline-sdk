@@ -8,8 +8,8 @@ import (
 
 	"emperror.dev/errors"
 
-	"github.com/banzaicloud/pipeline-internal-sdk/.gen/pipeline/pipeline"
-	"github.com/banzaicloud/pipeline-internal-sdk/transport"
+	"github.com/banzaicloud/pipeline-sdk/.gen/pipeline/pipeline"
+	"github.com/banzaicloud/pipeline-sdk/transport"
 )
 
 type Transport struct {
