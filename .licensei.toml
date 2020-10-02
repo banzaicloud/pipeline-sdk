@@ -1,0 +1,17 @@
+approved = [
+  "mit",
+  "apache-2.0",
+  "bsd-3-clause",
+  "bsd-2-clause",
+  "mpl-2.0",
+]
+
+ignored = [
+  "github.com/davecgh/go-spew", # ISC license
+
+]
+
+[header]
+ignoreFiles = ["generated.go","serve_gen.go","zz_generated.deepcopy.go"]
+
+template = ""

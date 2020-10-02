@@ -4,6 +4,7 @@ PIPELINE_VERSION = process-log
 PROTOC_VERSION = 3.11.4
 OPENAPI_GENERATOR_VERSION = v4.2.3
 OPENAPI_DESCRIPTOR = apis/pipeline/pipeline.yaml
+LICENSEI_VERSION = 0.3.1
 
 bin/protoc: bin/protoc-${PROTOC_VERSION}
 	@ln -sf protoc-${PROTOC_VERSION}/bin/protoc bin/protoc
@@ -56,3 +57,16 @@ generate-openapi: validate-openapi ## Generate go server based on openapi descri
 	-o /local/.gen/pipeline/pipeline
 	@ if [[ "$$OSTYPE" == "linux-gnu" ]]; then sudo chown -R $(shell id -u):$(shell id -g) .gen/pipeline/; fi
 	rm -r .gen/pipeline/pipeline/{docs,go.*}
+
+bin/licensei: bin/licensei-${LICENSEI_VERSION}
+	@ln -sf licensei-${LICENSEI_VERSION} bin/licensei
+bin/licensei-${LICENSEI_VERSION}:
+	@mkdir -p bin
+	curl -sfL https://git.io/licensei | bash -s v${LICENSEI_VERSION}
+	@mv bin/licensei $@
+
+.PHONY: license-check
+license-check: bin/licensei
+	bin/licensei check
+	bin/licensei header
+
